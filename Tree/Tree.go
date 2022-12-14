@@ -5,11 +5,12 @@ import "fmt"
 type TNode struct {
 	Value    rune
 	Children []*TNode
+	occ      int16
 }
 
 // NewTree creates an empty Tree
 func NewTree() *TNode {
-	return &TNode{0, []*TNode{}}
+	return &TNode{Value: 0, Children: []*TNode{}}
 }
 
 // IsEmpty checks whether a given tree is empty or not.
